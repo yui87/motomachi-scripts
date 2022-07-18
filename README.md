@@ -1,28 +1,24 @@
 # Scripts
 
-[Koruri](https://koruri.github.io/) をビルドするためのスクリプトです。
+[Motomachi](https://motomachi.ryoku.chat/) をビルドするためのスクリプトです。
 
 ## 使い方
 
 ```
-git clone https://github.com/Koruri/Scripts.git make_koruri
+git clone https://github.com/yui87/motomachi-scripts.git make_motomachi
 ```
 
 ```
-cd make_koruri
+cd make_motomachi
 ```
 
-Open Sans と Roboto は `setup.sh` の中でダウンロード、展開されます。
+合成に必要なフォントは `setup.sh` の中でダウンロード、展開されます。
 
 ```
 ./setup.sh
 ```
 
-あとは
-
-* [ここ](https://osdn.jp/projects/mplus-fonts/releases/62344) から最新の `M+ OUTLINE FONTS TESTFLIGHT` をダウンロード
-* M+ 1p を `mplus` に展開
-* [FontForge](https://fontforge.org/) をインストールしておく
+[FontForge](https://fontforge.org/) をインストールした上で、以下を実行します。
 
 ```
 fontforge -lang=py -script koruri.py

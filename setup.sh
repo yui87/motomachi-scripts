@@ -1,11 +1,10 @@
 #!/bin/bash
+blue=${txtbld}$(tput setaf 4)
 
-bldblu=${txtbld}$(tput setaf 4)
-
-mkdir -p koruri mplus opensans roboto
-cd opensans
-wget https://fonts.google.com/download?family=Open+Sans -O opensans.zip
-unzip opensans.zip
+mkdir -p motomachi roboto mplus inter
+cd inter
+wget https://fonts.google.com/download?family=Inter -O inter.zip
+unzip inter.zip
 cd ../
 
 cd roboto
@@ -13,33 +12,10 @@ wget https://fonts.google.com/download?family=Roboto -O roboto.zip
 unzip roboto.zip
 cd ../
 
-echo "${bldblu}                        **                        "
-echo "${bldblu}                      **# **                      "
-echo "${bldblu}                    **##### **                    "
-echo "${bldblu}                  **######### **                  "
-echo "${bldblu}                **############# **                "
-echo "${bldblu}              **################# **              "
-echo "${bldblu}            **##################### **            "
-echo "${bldblu}          **###***      *****######## **          "
-echo "${bldblu}        **##**        ***    ***####### **        "
-echo "${bldblu}      **##**         *###*      ***###### **      "
-echo "${bldblu}    **###*            ****         *****### **    "
-echo "${bldblu}  **####*                     ***############ **  "
-echo "${bldblu} **###**                    **#################** "
-echo "${bldblu}  ****                     *##################**  "
-echo "${bldblu}                          *#################**    "
-echo "${bldblu}                         *|###############**      "
-echo "${bldblu}                         *##############**        "
-echo "${bldblu}                         *############**          "
-echo "${bldblu}                         *##########**            "
-echo "${bldblu}                         |########**              "
-echo "${bldblu}                        *#######**                "
-echo "${bldblu}                       * #####**                  "
-echo "${bldblu}                      *#####**                    "
-echo "${bldblu}                      ** #**                      "
-echo "${bldblu}                        **                        "
+cd mplus
+wget https://fonts.google.com/download?family=M+PLUS+1p -O mplus.zip
+unzip mplus.zip
 
-echo "Koruri を生成するには FontForge をインストールし、"
-echo "最新の M+ 1p を mplus/ に展開した後、以下を実行してください"
-echo "fontforge -lang=py -script koruri.py"
+echo "${blue}Motomachi を生成するには FontForge をインストールした上で、以下を実行してください。"
+echo "${blue}fontforge -lang=py -script motomachi.py"
 tput sgr0
